@@ -1,8 +1,8 @@
-import React from 'react'
-import exerciseImg from './../images/exercise.png'
-import circlesImg from './../images/circles.png'
-import './../styles/Card.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import React from 'react';
+import exerciseImg from './../images/exercise.png';
+import circlesImg from './../images/circles.png';
+import './../styles/Welcome.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Card extends React.Component {
 
