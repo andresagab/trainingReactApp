@@ -6,21 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Card extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            image: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/4_avatar-512.png'
-        }
-    }
-
-    componentDidMount() {
-        setTimeout(() => {
-            this.setState({
-                image: exerciseImg
-            })
-        }, 5000);
-    }
-
     render() {
 
         const {title, description, img, leftColor, rightColor} = this.props;
@@ -30,7 +15,7 @@ class Card extends React.Component {
                 <div className='card-body'>
                     <div className='row center'>
                         <div className='col-6'>
-                            <img className='float-right' src={this.state.image}/>
+                            <img className='float-right' src={img}/>
                         </div>
                         <div className='col-6 Fitness-Card-Info'>
                             <h1>{title}</h1>
