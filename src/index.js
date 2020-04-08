@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Exercises  from './pages/Exercises'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import App from './components/App'
 
 const contaniner = document.getElementById('root');
 
-ReactDOM.render(<Exercises/>, contaniner);
+ReactDOM.render(<App/>, contaniner);
+// ReactDOM.render(<Exercises/>, contaniner);

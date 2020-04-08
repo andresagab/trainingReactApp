@@ -8,6 +8,7 @@ function ExerciseList(props) {
                 //Iteración y asignación de la DATA en un COMPONENTE Card.js
                 props.exercises.map((exercise) => {
                     return (
+                        //Llamado del Card y envio de sus respectivos props
                         <Card
                             title={exercise.title}
                             description={exercise.description}
