@@ -6,9 +6,13 @@ class ExerciseNew extends React.Component{
     render() {
         return (
             <div>
-                <span>Exercise new</span>
+                <button className='btn btn-success' onClick={this.handleClick}>Send</button>
             </div>
         );
+    }
+
+    handleClick() {
+        console.log("Clicked...");
     }
 
 }
