@@ -11,8 +11,8 @@ class ExerciseNew extends React.Component{
         );
     }
 
-    handleClick() {
-        console.log("Clicked...");
+    handleClick = () => {
+        console.log(this);
     }
 
 }
