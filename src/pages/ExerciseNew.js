@@ -1,48 +1,45 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css'
+import Card from "../components/Card";
+import ExerciseForm from "../components/ExerciseForm";
 
 class ExerciseNew extends React.Component{
 
-    state = {};
+    state = {
+        form: {
+            title: '',
+            description: '',
+            img: '',
+            leftColor: '',
+            rightColor: ''
+        }
+    };
 
     render() {
         return (
-            <div className='container'>
-                <form onSubmit={this.handleSubmit}>
-                    <div className='form-group'>
-                        <input className='form-control' type='text' name='tittle' placeholder='Tittle' value={this.state.tittle} onChange={this.handleChange}/>
-                    </div>
-                    <div className='form-group'>
-                        <input className='form-control' type='text' name='description' placeholder='Description' value={this.state.description} onChange={this.handleChange}/>
-                    </div>
-                    <div className='form-group'>
-                        <input className='form-control' type='text' name='img' placeholder='img' value={this.state.img} onChange={this.handleChange}/>
-                    </div>
-                    <div className='form-row'>
-                        <div className='col'>
-                            <input className='form-control' type='text' name='leftColor' placeholder='Left Color' value={this.state.leftColor} onChange={this.handleChange}/>
-                        </div>
-                        <div className='col'>
-                            <input className='form-control' type='text' name='rightColor' placeholder='Right Color' value={this.state.rightColor} onChange={this.handleChange}/>
-                        </div>
-                    </div>
-                    <button className='btn btn-primary float-right' type='submit'>Submit</button>
-                </form>
+            <div className='row'>
+                <div className='col-sm'>
+                    <Card
+                        {...this.state.form}
+                    />
+                </div>
+                <div className='col-sm'>
+                    <ExerciseForm
+                        onChange={this.handleChange}
+                        form={this.state.form}
+                    />
+                </div>
             </div>
-        );
+        )
     }
 
     handleChange = e => {
         // console.log(`${e.target.name}: ${e.target.value}`);
         this.setState({
-            [e.target.name] : e.target.value
+            form : {
+                ...this.state.form,//Mantener los datos almacenados previamente
+                [e.target.name]: e.target.value//Si hay diferencias en los valores, actualizamos la variables
+            }
         });
-    }
-
-    handleSubmit = e => {
-        //Cancelamos el reload de la página
-        e.preventDefault();
-        console.log(this.state);
     }
 
 }

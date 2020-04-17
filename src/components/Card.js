@@ -8,7 +8,7 @@ class Card extends React.Component {
 
     render() {
 
-        const {title, description, img, leftColor, rightColor} = this.props;
+        const {title, description, img, leftColor, rightColor} = this.props;//Caracterizamos la variables con lo almacenado en las props
 
         return (
             <div className="card mx-auto Fitness-Card" style={{backgroundImage: `url(${circlesImg}), linear-gradient(to right, ${leftColor}, ${rightColor})`}}>
