@@ -1,9 +1,22 @@
-import React from "react"
+import React, { useState } from "react"
 import Loading from "../components/Loading";
 import FatalError from "./500";
 import Exercises from "./Exercises";
 
-class ExercisesContainer extends React.Component{
+const ExercisesContainer = () => {
+
+    const [data, setData] = useState([]);//El parametro de useState es aquel que se le quiere asignar a la variable cuando arranque el componente
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+
+    if (loading) return <Loading/>
+    if (error) return <FatalError/>
+    return <Exercises
+        data={data}
+    />
+}
+
+/*class ExercisesContainer extends React.Component{
 
     //Babel remplaza la inicialización de propiedades, por lo tanto no es necesario hacer dicho trabajo en el constructor
     state = {
@@ -41,6 +54,6 @@ class ExercisesContainer extends React.Component{
         />
     }
 
-}
+}*/
 
 export default ExercisesContainer;
