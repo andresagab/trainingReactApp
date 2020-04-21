@@ -6,4 +6,4 @@ import App from './components/App'
 const contaniner = document.getElementById('root');
 
 ReactDOM.render(<App/>, contaniner);
-// ReactDOM.render(<Exercises/>, contaniner);
+// ReactDOM.render(<ExercisesContainer/>, contaniner);
