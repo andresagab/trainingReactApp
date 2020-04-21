@@ -1,5 +1,5 @@
 import React from "react";
-import './../styles/Card.css';
+import './styles/Welcome.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 //Componente funcional: Cuando no se va a trabajar con los estados de tipo arrow (array) functions

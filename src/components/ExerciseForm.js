@@ -4,10 +4,10 @@ import 'bootstrap/dist/css/bootstrap-grid.min.css';
 class ExerciseForm extends React.Component{
 
     render() {
-        const { onChange, form } = this.props;
+        const { onChange, onSubmit, form } = this.props;
         return (
             <div className='container'>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={onSubmit}>
                     <div className='form-group'>
                         <input className='form-control' type='text' name='title' placeholder='Tittle' value={form.title} onChange={onChange}/>
                     </div>
@@ -29,12 +29,6 @@ class ExerciseForm extends React.Component{
                 </form>
             </div>
         );
-    }
-
-    handleSubmit = e => {
-        //Cancelamos el reload de la página
-        e.preventDefault();
-        //console.log(form);
     }
 
 }

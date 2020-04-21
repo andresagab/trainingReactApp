@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 
 const ExerciseList = ({exercises}) => (
-    <div>
+    <>
         {
             //Iteración y asignación de la DATA en un COMPONENTE Card.js
             exercises.map((exercise) => {
@@ -19,7 +19,7 @@ const ExerciseList = ({exercises}) => (
                 )
             })
         }
-    </div>
+    </>
 );
 
 export default ExerciseList;

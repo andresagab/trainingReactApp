@@ -42,11 +42,11 @@ class Exercises extends React.Component{
         if (this.state.error) return <FatalError/>
         if (this.state.loading) return <Loading/>;
         return (
-            <div>
+            <React.Fragment>
                 <Welcome username="Andres"/>
                 <ExerciseList exercises={this.state.data}/>
                 <AddButton/>
-            </div>
+            </React.Fragment>
         );
     }
 
