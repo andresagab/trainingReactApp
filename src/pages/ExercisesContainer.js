@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react";
 import Loading from "../components/Loading";
 import FatalError from "./500";
 import Exercises from "./Exercises";
@@ -8,6 +8,23 @@ const ExercisesContainer = () => {
     const [data, setData] = useState([]);//El parametro de useState es aquel que se le quiere asignar a la variable cuando arranque el componente
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+
+    useEffect(() => {
+        fetchExercises();
+    }, []);
+
+    const fetchExercises = async () => {
+        try {
+            let res = await fetch('http://localhost:8000/api/exercises');
+            let data = await res.json();
+            setData(data);
+            setLoading(false);
+            setError(null);
+        } catch (error) {
+            setLoading(false);
+            setError(null);
+        }
+    }
 
     if (loading) return <Loading/>
     if (error) return <FatalError/>
