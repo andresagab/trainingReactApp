@@ -3,8 +3,8 @@ import './styles/Card.css';
 import circlesImg from './../images/circles.png';
 import emptyImg from './../images/empty.png';
 
-/*const Card = ({title, description, img, leftColor, rightColor}) => (
-    <div className='card mx-auto Fitness-Card' style={{ backgroundImage: `url(${circlesImg}), linear-gradient: (to right, ${leftColor || '#56CCF2'}, ${rightColor || '#2F80ED'})` }}>
+const Card = ({title, description, img, leftColor, rightColor}) => (
+    <div className='card mx-auto Fitness-Card' style={{backgroundImage: `url(${circlesImg}), linear-gradient(to right, ${leftColor || '#56CCF2'}, ${rightColor || '#2F80ED'})` }}>
         <div className='card-body'>
             <div className='row center'>
                 <div className='col-6'>
@@ -17,9 +17,9 @@ import emptyImg from './../images/empty.png';
             </div>
         </div>
     </div>
-)*/
+)
 
-class Card extends React.Component {
+/*class Card extends React.Component {
 
     render() {
 
@@ -42,6 +42,6 @@ class Card extends React.Component {
         );
         //return super.render();
     }
-}
+}*/
 
 export default Card;
